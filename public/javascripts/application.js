@@ -1,5 +1,5 @@
 (function($) {
 	$(document).ready(function(){
-		$("div").hide();
+		// $("div").hide();
 	});
 })(jQuery);

@@ -1,16 +1,6 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
 
-
-<% content_for :head do %>
-	<script type="text/javascript">
-		$(function() {
-			$("#tabs").tabs();
-		});
-	</script>
-<% end %>
-
-
 <div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">Nunc tincidunt</a></li>
@@ -28,3 +18,12 @@
 		<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
 	</div>
 </div>
+
+<% content_for :head do %>
+	<script type="text/javascript">
+		$(function() {
+			$("#tabs").tabs();
+			// $("#tabs").show();
+		});
+	</script>
+<% end %>
