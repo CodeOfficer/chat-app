@@ -2,10 +2,16 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="content-script-type" content="text/javascript">
 	<title>Page Title</title>
-	<%= stylesheet_link_tag :all, :cache => true %>
-	<%= javascript_include_tag :all, :cache => true %>
+	<%= stylesheet_link_tag "reset.css", "text.css", "960.css", "pepper-grinder/jquery-ui-1.7.2.custom.css", "application.css", :cache => true %>
+	<%#= javascript_include_tag "prototype", "jquery-1.3.2.min.js", "jquery-ui-1.7.2.custom.min.js", "application.js", :juggernaut, :cache => true %>
+	<%#= javascript_include_tag "jquery-1.3.2.min.js", "jquery-ui-1.7.2.custom.min.js", "application.js", 'jquerynaut.js', :cache => true %>
+	
+	<%= javascript_include_tag "jquery-1.3.2.min", "jquery-ui-1.7.2.custom.min.js", "json", "juggernaut/juggernaut", "juggernaut/jquerynaut", "juggernaut/swfobject", "application.js", :cache => true %>
+	
 	<%= yield :head %>
+	<%= juggernaut %>
 </head>
 <body>
 
