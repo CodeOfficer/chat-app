@@ -15,9 +15,24 @@
 #chat_box {
 	width: 100%;
 	height: 260px;
+	border: 1px solid #CCC;
+	margin-bottom: 1em;
+	background-color: #FFF;
+/*	padding: 1em 0;*/
+}
+
+#chat_box ul {
+	list-style: none;
+	margin-left: 0;
+	margin: .5em 0em .5em 0em;
+}
+
+#chat_box ul li{
+	margin-left: .5em;
 }
 
 #chat_entry {
-	width: 92%;
+	width: 100%;
 	height: 20px;
+	border: 1px solid #CCC;
 }
