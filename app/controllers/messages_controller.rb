@@ -4,13 +4,16 @@ class MessagesController < ApplicationController
   
   def create
     @message = Message.new(params[:message])
+    @message.room = @room
     
     respond_to do |format|
       if @message.save
-        channel = [params[:room_id]]
-        message = "<div class='message'> <b>user</b>: #{params[:message][:body]}</div>"  
-        render :juggernaut => {:type => :send_to_all, :channels => channel }  do |page|
-          page << "$('#conversation ul').append('<li>#{escape_javascript(message)}</li>')"
+        render :juggernaut => {:type => :send_to_channel, :channel => @room.id}  do |page|
+          
+          
+        # render :juggernaut => {:type => :send_to_all}  do |page|
+          page << "$('#conversation ul').append('#{escape_javascript(render(:partial => @message))}')"
+          page << "$('#conversation').animate({ scrollTop: $('#conversation').attr('scrollHeight') }, 3000);"
         end
         format.json { render :json => @message } 
       else

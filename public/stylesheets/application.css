@@ -87,40 +87,43 @@ a {
 	height: 400px;
 }
 
-
 #conversation {
-	width: 680px;
+	width: 658px;
 	height: 310px;
 	border: 1px solid #CCC;
 	margin-bottom: 1em;
 	background-color: #FFF;
-/*	padding: 1em 0;*/
+	padding: 0 1em;
+	overflow: auto;
 }
 
 #conversation ul {
 	list-style: none;
-	margin-left: 0;
-	margin: .5em 0em .5em 0em;
+	margin: .5em 0em;
 }
 
-#conversation ul li{
-	margin-left: .5em;
+#conversation ul li {
+	margin-left: 0em;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #E6E6E6;
+	font: normal normal 1.5em/1.5em Arial, sans-serif;
+}
+
+#conversation ul li.message {
+	
 }
 
 form#new_message {}
 form#new_message input {
-	width: 646px;
+	width: 630px;
 	height: 20px;
 	border: 1px solid #CCC;
-/*	background-image: url('/images/silk/icons/bullet_go.png');*/
 	background-image: url('/images/silk/icons/comments.png');
 	background-repeat: no-repeat;
 	padding-left: 2em;
+	padding-right: 1em;
 	background-position: .5em;
-/*	font: 1em "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;*/
 	font: normal normal 1.5em/1.5em Arial, sans-serif;
-/*	background-position: center left;*/
-/*	background-position: 0px 0px;*/
 }
 
 .spaced-left {

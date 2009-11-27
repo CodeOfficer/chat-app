@@ -6,11 +6,13 @@
 			var url = form.attr("action");
 			var data = form.serialize();
 			var callback = function(data, textStatus){ 
-				if (data.errors == undefined) { 
+				if (data.errors == undefined) {
 					$("#message_body").val("");
 					$("#message_body").focus();
 				} else {
-					$("#conversation ul").append("<li class='error'>** an error occurred **</li>");
+					$.each(data.errors, function(i, val) {
+						$("#conversation ul").append("<li class='error'>** " + val + " **</li>");
+					});
 				};
 			};
 			$.post(url, data, callback, "json");
