@@ -1,4 +1,7 @@
-/* define new font size*/
+
+#page_title{
+	text-align: center;
+}
 
 .ui-widget { font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; font-size: 11px; }
 
@@ -13,7 +16,7 @@
 }
 
 #chat_box {
-	width: 100%;
+	width: 680px;
 	height: 260px;
 	border: 1px solid #CCC;
 	margin-bottom: 1em;
@@ -32,7 +35,21 @@
 }
 
 #chat_entry {
-	width: 100%;
+	width: 646px;
 	height: 20px;
 	border: 1px solid #CCC;
+/*	background-image: url('/images/silk/icons/bullet_go.png');*/
+	background-image: url('/images/silk/icons/comments.png');
+	background-repeat: no-repeat;
+	padding-left: 2em;
+	background-position: .5em;
+/*	font: 1em "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;*/
+	font: normal normal 1.5em/1.5em Arial, sans-serif;
+/*	background-position: center left;*/
+/*	background-position: 0px 0px;*/
+}
+
+.spaced-left {
+	margin-left: 1em;
+	text-align: justify;
 }

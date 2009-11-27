@@ -1,0 +1,12 @@
+<% title "Room" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @room.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_room_path(@room) %> |
+  <%= link_to "Destroy", @room, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", rooms_path %>
+</p>
