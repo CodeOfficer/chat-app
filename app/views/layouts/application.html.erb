@@ -1,16 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<title>Page Title</title>
-	<%= stylesheet_link_tag "reset.css", "text.css", "960.css", "pepper-grinder/jquery-ui-1.7.2.custom.css", "application.css", :cache => true %>
-	<%= javascript_include_tag "jquery-1.3.2.min", "jquery-ui-1.7.2.custom.min.js", "json", "juggernaut/juggernaut", "juggernaut/jquerynaut", "juggernaut/swfobject", "application.js", :cache => true %>
-	<%= juggernaut %>
-	<%= yield :head %>
-</head>
-<body>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag "reset.css", "text.css", "960.css", "pepper-grinder/jquery-ui-1.7.2.custom.css", "application.css", :cache => true %>
+		<%= javascript_include_tag "jquery-1.3.2.min", "jquery-ui-1.7.2.custom.min.js", "json", "juggernaut/juggernaut", "juggernaut/jquerynaut", "juggernaut/swfobject", "application.js", :cache => true %>
+		<%= juggernaut %>
+    <%= yield(:head) %>
+  </head>
+  <body>
 
-	<%= yield %>
+		<div class="container_16">
+			<div class="grid_16 alpha omega">
+	      <%- flash.each do |name, msg| -%>
+	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	      <%- end -%>
+      
+	      <%- if show_title? -%>
+	        <h1><%=h yield(:title) %></h1>
+	      <%- end -%>
+    	</div>
+      <%= yield %>
+    </div>
 
-</body>
+  </body>
 </html>

@@ -1,6 +1,7 @@
 class CreateMessages < ActiveRecord::Migration
   def self.up
     create_table :messages do |t|
+      t.references :room
       t.string :body
       t.timestamps
     end
