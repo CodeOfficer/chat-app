@@ -72,7 +72,18 @@ module Juggernaut
       }
       send_data(fc)
     end
-    
+
+    #     
+    def show_clients_for_channel_and_post(channels)
+      fc = {
+        :command    => :query,
+        :type       => :show_clients_for_channel_and_post,
+        :channels   => channels
+      }
+      send_data(fc)
+    end
+    # 
+
     def show_clients
       fc = {
         :command  => :query,

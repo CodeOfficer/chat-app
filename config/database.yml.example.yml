@@ -20,3 +20,29 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+# ------------------
+  
+# development:
+#   adapter: mysql
+#   encoding: utf8
+#   database: codeofficer2_development
+#   username: root
+#   password:
+#   socket: /tmp/mysql.sock
+# 
+# test:
+#   adapter: mysql
+#   encoding: utf8
+#   database: codeofficer2_test
+#   username: root
+#   password:
+#   socket: /tmp/mysql.sock
+# 
+# production:
+#   adapter: mysql
+#   encoding: utf8
+#   database: codeofficer2_production
+#   username: root
+#   password: 
+#   socket: /tmp/mysql.sock

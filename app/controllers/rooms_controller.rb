@@ -1,4 +1,7 @@
 class RoomsController < ApplicationController
+  
+  before_filter :require_user, :except => [:index]
+  
   def index
     @rooms = Room.all
   end

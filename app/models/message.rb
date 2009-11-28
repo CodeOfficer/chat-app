@@ -3,6 +3,7 @@ class Message < ActiveRecord::Base
   default_scope :order => 'messages.created_at ASC'
   
   belongs_to :room
+  belongs_to :user
   
   named_scope :for_room, lambda { |id| { :conditions => ['room_id = ?', id], :limit => 5 } }
   

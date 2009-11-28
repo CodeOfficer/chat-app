@@ -1,9 +1,11 @@
 class MessagesController < ApplicationController
   
+  before_filter :require_user
   before_filter :find_room
   
   def create
     @message = Message.new(params[:message])
+    @message.user = current_user
     @message.room = @room
     
     respond_to do |format|

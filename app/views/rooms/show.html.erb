@@ -1,3 +1,10 @@
+<% content_for :head do %>
+	<%= juggernaut :client_id => current_user.id,
+	    :session_id => current_user_session.id,
+	    :debug => true,
+	    :channels => [ 1 ] %>
+<% end %>
+
 <div class="grid_16 alpha omega">
 	<% title "Room: #{@room.name}" %>
 	<p>
@@ -27,8 +34,10 @@
 
 <div class="grid_4 omega">
 	<div class="spaced-left">
-		<%#= Juggernaut.show_users_for_channels(@room.id).size %>
-		<%#= juggernaut(:channels => [@room.id], :client_id => '1') %>
+		<div id="users_list">
+			<h3><%= pluralize(Juggernaut.show_clients_for_channels(@room.id).size, 'User') %> Users</h3>
+			<ul></ul>
+		</div>
 	</div>
 </div>
 

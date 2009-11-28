@@ -130,3 +130,27 @@ form#new_message input {
 	margin-left: 1em;
 	text-align: justify;
 }
+
+#account_bar {
+	text-align: right;
+}
+
+.inputs {
+	border: 1px solid #000000;
+	overflow: hidden;
+	width: 100%;
+}
+
+
+
+/*form {*/
+/*	overflow:hidden; width:100%;*/
+/*}*/
+
+/*.clear{*/
+/*	clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}*/
+/*.clearfix:after{*/
+/*	clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}*/
+/*.clearfix{display:block;}*/
+/** html .clearfix{height:1%;}*/
+/**/
