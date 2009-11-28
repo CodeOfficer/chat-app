@@ -109,9 +109,9 @@ a {
 	font: normal normal 1.5em/1.5em Arial, sans-serif;
 }
 
-#conversation ul li.message {
-	
-}
+#conversation ul li.message {}
+#conversation ul li.entered { color: #008000; }
+#conversation ul li.left { color: #F00; }
 
 form#new_message {}
 form#new_message input {
@@ -135,22 +135,15 @@ form#new_message input {
 	text-align: right;
 }
 
-.inputs {
-	border: 1px solid #000000;
-	overflow: hidden;
-	width: 100%;
+
+#users_list {}
+#users_list ul {
+/*	list-style: disc;*/
+	list-style: none inside;
+	margin: 0em;
 }
 
-
-
-/*form {*/
-/*	overflow:hidden; width:100%;*/
-/*}*/
-
-/*.clear{*/
-/*	clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}*/
-/*.clearfix:after{*/
-/*	clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}*/
-/*.clearfix{display:block;}*/
-/** html .clearfix{height:1%;}*/
-/**/
+#users_list ul li {
+	margin-left: 0em;
+	padding-bottom: 2px;
+}
