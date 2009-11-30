@@ -17,7 +17,7 @@ class JuggernautController < ApplicationController
     users = User.find(params[:clients])
     channels = params[:channels].collect{|channel| channel.to_i}
     render :juggernaut => {:type => :send_to_channels, :channels => channels } do |page|
-      page << "$('#users_list ul').html('#{escape_javascript(users.collect{ |user| "<li>#{user.login}</li>" }.join)}')"
+      page << "$('#users_list').html('#{escape_javascript(render(:partial => 'rooms/user_list', :locals => {:users => users}))}')"
     end
     render :nothing => true
   end
