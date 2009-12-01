@@ -1,0 +1,1 @@
+http://blog.angelbob.com/posts/109-Connecting-to-Juggernaut-outside-of-Rails---code-juggernaut-railsmud
