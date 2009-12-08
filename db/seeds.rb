@@ -6,8 +6,8 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
 
-%w(codeofficer thatguy).each do |user|
-  User.create!({  :login => user, :email => "#{user}@codeofficer.com", :password => "password", :password_confirmation => "password"}) 
+%w(user1 user2).each do |user|
+  User.create!({  :login => user, :email => "#{user}@example.com", :password => "password", :password_confirmation => "password"}) 
 end
 
-Room.create!({:name => "Asimov"})
+Room.create!({:name => "Lobby"})
