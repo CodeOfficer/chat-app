@@ -1,11 +1,11 @@
 class Message < ActiveRecord::Base
   
-  default_scope :order => 'messages.created_at ASC'
+  default_scope :order => 'messages.created_at DESC'
   
   belongs_to :room
   belongs_to :user
   
-  named_scope :for_room, lambda { |id| { :conditions => ['room_id = ?', id], :limit => 5 } }
+  named_scope :for_room, lambda { |id| { :conditions => ['room_id = ?', id], :limit => 15 } }
   
   attr_accessible :body
   

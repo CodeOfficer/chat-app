@@ -9,7 +9,6 @@
 	<% title "Room: #{@room.name}" %>
 	<p>
 	  <%= link_to "Edit", edit_room_path(@room) %> |
-	  <%= link_to "Destroy", @room, :confirm => 'Are you sure?', :method => :delete %> |
 	  <%= link_to "View All", rooms_path %>
 	</p>
 </div>
@@ -22,7 +21,7 @@
 		<div id="tabs-1">
 			<div id="conversation">
 				<ul>
-					<%= render :partial => Message.for_room(params[:id]) %>
+					<%= render :partial => @messages %>
 				</ul>
 			</div>
 			<% form_for [@room, Message.new] do |f| -%>

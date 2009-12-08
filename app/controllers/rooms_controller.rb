@@ -8,6 +8,7 @@ class RoomsController < ApplicationController
   
   def show
     @room = Room.find(params[:id])
+    @messages = Message.for_room(params[:id]).reverse
   end
   
   def new
