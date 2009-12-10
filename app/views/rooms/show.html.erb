@@ -7,10 +7,6 @@
 
 <div class="grid_16 alpha omega">
 	<% title "Room: #{@room.name}" %>
-	<p>
-	  <%= link_to "Edit", edit_room_path(@room) %> |
-	  <%= link_to "View All", rooms_path %>
-	</p>
 </div>
 	
 <div class="grid_12 alpha">
@@ -34,6 +30,7 @@
 <div class="grid_4 omega">
 	<div class="spaced-left">
 		<div id="users_list">
+			<p>Loading ...</p>
 		</div>
 	</div>
 </div>
