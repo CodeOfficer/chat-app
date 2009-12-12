@@ -15,9 +15,11 @@
 			<div class="grid_16 alpha omega">
 				<div id="account_bar">
 					<% if logged_in? %>
-						<%=h current_user.login %>
+						<span style="color: <%=h current_user.setting.text_color %>"><%=h current_user.login %></span>
 						|
 						<%= link_to "Rooms", rooms_path %>
+						|
+						<%= link_to "Settings", edit_settings_path %>
 						|
 						<%= link_to "logout", user_session_path(current_user_session), :confirm => 'Are you sure?', :method => :delete %>
 					<% else %>

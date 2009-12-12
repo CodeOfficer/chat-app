@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   map.resources :rooms, :has_many => :messages
   map.resource :account, :controller => "users"
+  map.resource :settings
   map.resources :users
   map.root :rooms
   # map.root :controller => "user_sessions", :action => "new"

@@ -1,0 +1,14 @@
+<% title "Setting" %>
+
+<p>
+  <strong>User:</strong>
+  <%=h @setting.user_id %>
+</p>
+<p>
+  <strong>Text Color:</strong>
+  <%=h @setting.text_color %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_settings_path %>
+</p>
